@@ -1,0 +1,1019 @@
+//Sección de depresión
+    {//1
+        pregunta: "Tristeza",
+        respuestas: ["Opción 0 No me siento triste",
+                  "Opción 1 Me siento trsite gran parte del tiempo",
+                  "Opción 2 Me siento trsite todo el tiempo ",
+                  "Opción 3 Me siento tan trsite o soy tan infeliz que no puedo soportarlo"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//2
+        pregunta: "Pesimismo",
+        respuestas: ["Opción 0 No estoy desalentado respecto del mi futuro",
+                  "Opción 1 Me siento más desalentado respecto de mi futuro que lo que solía estarlo",
+                  "Opción 2 No espero que las cosas funcionen para mi",
+                  "Opción 3 Siento que no hay esperanza para mi futuro y que sólo puede empeorar"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//3
+        pregunta: "Fracaso",
+        respuestas: ["Opción 0 No me siento como un fracasado",
+                  "Opción 1 He fracasado más de lo que hubiera debido",
+                  "Opción 2 Cuando miro hacia atrás, veo muchos fracasos",
+                  "Opción 3 Siento que como persona soy un fracaso total"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//4
+        pregunta: "Pérdida de Placer",
+        respuestas: ["Opción 0 Obtengo tanto placer como siempre por las cosas de las que disfruto",
+                  "Opción 1 No disfruto tanto de las cosas como solía hacerlo",
+                  "Opción 2 Obtengo muy poco placer de las cosas que solía disfrutar",
+                  "Opción 3 No puedo obtener ningún placer de las cosas de las que solía disfrutar"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//5
+        pregunta: "Sentimientos de Culpa",
+        respuestas: ["Opción 0 No me siento particularmente culpable",
+                  "Opción 1 Me siento culpable respecto de varias cosas que he hecho o que debería haber",
+                  "Opción 2 Me siento bastante culpable la mayor parte del tiempo",
+                  "Opción 3 Me siento culpable todo el tiempo"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//6
+        pregunta: "Sentimientos de Castigo",
+        respuestas: ["Opción 0 No siento que este siendo castigado",
+                  "Opción 1 Siento que tal vez pueda ser castigado",
+                  "Opción 2 Espero ser castigado",
+                  "Opción 3 Siento que estoy siendo castigado"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//7
+        pregunta: "Disconformidad con uno mismo",
+        respuestas: ["Opción 0 Siento acerca de mi lo mismo que siempre",
+                  "Opción 1 He perdido la confianza en mí mismo",
+                  "Opción 2 Estoy decepcionado conmigo mismo",
+                  "Opción 3 No me gusto a mí mismo"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//8
+        pregunta: "Atocrítica",
+        respuestas: ["Opción 0 No me critico ni me culpo más de lo habitual",
+                  "Opción 1 Estoy más crítico conmigo mismo de lo que solía estarlo",
+                  "Opción 2 Me critico a mí mismo por todos mis errores",
+                  "Opción 3 Me culpo a mí mismo por todo lo malo que sucede"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//9
+        pregunta: "Pensamientos o Deseos Suicidas",
+        respuestas: ["Opción 0 No tengo ningún pensamiento de matarme",
+                  "Opción 1 He tenido pensamientos de matarme, pero no lo haría",
+                  "Opción 2 Querría matarme",
+                  "Opción 3 Me mataría si tuviera la oportunidad de hacerlo"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//10
+        pregunta: "Llanto",
+        respuestas: ["Opción 0 No lloro más de lo que solía hacerlo",
+                  "Opción 1 Lloro más de lo que solía hacerlo",
+                  "Opción 2 Lloro por cualquier pequeñez",
+                  "Opción 3 Siento ganas de llorar pero no puedo"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//11
+        pregunta: "Agitación",
+        respuestas: ["Opción 0 No estoy más inquieto o tenso que lo habitual",
+                  "Opción 1 Me siento más inquieto o tenso que lo habitual",
+                  "Opción 2 Estoy tan inquieto o agitado que me es difícil quedarme quieto",
+                  "Opción 3 Estoy tan inquieto o agitado que tengo que estar siempre en movimiento o haciendo algo"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//12
+        pregunta: "Pérdida de Interés",
+        respuestas: ["Opción 0 No he perdido el interés en otras actividades o personas",
+                  "Opción 1 Estoy menos interesado que antes en otras personas o cosas",
+                  "Opción 2 He perdido casi todo el interés en otras personas o cosas",
+                  "Opción 3 Me es difícil interesarme por algo"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//13
+        pregunta: "Indecisión",
+        respuestas: ["Opción 0 Tomo mis propias decisiones tan bien como siempre",
+                  "Opción 1 Me resulta más difícil que de costumbre tomar decisiones",
+                  "Opción 2 Encuentro mucha más dificultad que antes para tomar decisiones",
+                  "Opción 3 Tengo problemas para tomar cualquier decisión"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//14
+        pregunta: "Desvalorización",
+        respuestas: ["Opción 0 No siento que yo no sea valioso",
+                  "Opción 1 No me considero a mi mismo tan valioso y útil como solía considerarme",
+                  "Opción 2 Me siento menos valioso cuando me comparo con otros",
+                  "Opción 3 Siento que no valgo nada"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//15
+        pregunta: "Pérdida de Energía",
+        respuestas: ["Opción 0 Tengo tanta energía como siempre",
+                  "Opción 1 Tengo menos energía que la que solía tener",
+                  "Opción 2 No tengo suficiente energía para hacer demasiado",
+                  "Opción 3 No tengo energía suficiente para hacer nada"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//16
+        pregunta: "Cambios en los Hábitos de Sueño",
+        respuestas: ["Opción 0 No he experimentado ningún cambio en mis hábitos de sueño",
+                  "Opción 1a Duermo un poco más que lo habitual",
+                  "Opción 1b Duermo un poco menos que lo habitual",
+                  "Opción 2a Duermo mucho más que lo habitual",
+                  "Opción 2b Duermo mucho menos que lo habitual",
+                  "Opción 3a Duermo la mayor parte del día",
+                  "Opción 3b Me despierto 1-2 horas más temprano y no puedo volver a dormirme"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//17
+        pregunta: "Irritabilidad",
+        respuestas: ["Opción 0 No estoy tan irritable que lo habitual",
+                  "Opción 1 Estoy más irritable que lo habitual",
+                  "Opción 2 Estoy mucho más irritable que lo habitual",
+                  "Opción 3 Estoy irritable todo el tiempo"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//18
+        pregunta: "Cambios en el Apetito",
+        respuestas: ["Opción 0 No he experimentado ningún cambio en mi apetito",
+                  "Opción 1a Mi apetito es un poco menor que lo habitual",
+                  "Opción 1b Mi apetito es un poco mayor que lo habitual",
+                  "Opción 2a Mi apetito es mucho menor que antes",
+                  "Opción 2b Mi apetito es mucho mayor que lo habitual",
+                  "Opción 3a No tengo apetito en absoluto",
+                  "Opción 3b Quiero comer todo el día"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//19
+        pregunta: "Dificultad de Concentración",
+        respuestas: ["Opción 0 Puedo concentrarme tan bien como siempre",
+                  "Opción 1 No puedo concentrarme tan bien como habitualmente",
+                  "Opción 2 Me es difícil mantener la mente en algo por mucho tiempo",
+                  "Opción 3 Encuentro que no puedo concentrarme en nada"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//20
+        pregunta: "Cansancio o Fatiga",
+        respuestas: ["Opción 0 No estoy más cansado o fatigado que lo habitual",
+                  "Opción 1 Me fatigo o me canso más fácilmente que lo habitual",
+                  "Opción 2 Estoy demasiado fatigado o cansado para hacer muchas de las cosas que solía hacer",
+                  "Opción 3 Estoy demasiado fatigado o cansado para hacer la mayoría de las cosas que solía hacer"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+    {//21
+        pregunta: "Pérdida de Interés en el Sexo",
+        respuestas: ["Opción 0 No he notado ningún cambio reciente en mi interés por el sexo",
+                  "Opción 1 Estoy menos interesado en el sexo de lo que solía estarlo",
+                  "Opción 2 Estoy mucho menos interesado en el sexo",
+                  "Opción 3 He perdido completamente el interés en el sexo"],
+        selected: 0,
+        type: 0 //"depresión"
+    },
+
+
+
+
+//Sección de ansiedad
+    {//1
+        pregunta: "Hormigueo o entumecimiento",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//2
+        pregunta: "Sensación de calor",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//3
+        pregunta: "Temblor de piernas",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//4
+        pregunta: "Incapacidad de relajarse",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//5
+        pregunta: "Miedo a que suceda lo peor",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//6
+        pregunta: "Mareo o aturdimiento",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//7
+        pregunta: "Palpitaciones o taquicardia",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//8
+        pregunta: "Sensación de inestabilidad e inseguridad física",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//9
+        pregunta: "Terrores",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//10
+        pregunta: "Nerviosismo",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//11
+        pregunta: "Sensación de ahogo",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//12
+        pregunta: "Temblores de manos",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//13
+        pregunta: "Temblor generalizado o estremecimiento",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//14
+        pregunta: "Miedo a perder el control",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//15
+        pregunta: "Dificultad para respirar",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//16
+        pregunta: "Miedo a morirse",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//17
+        pregunta: "Sobresaltos",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//18
+        pregunta: "Molestias digestivas o abdominales",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//19
+        pregunta: "Palidez",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//20
+        pregunta: "Rubor facial",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+    {//21
+        pregunta: "Sudoración (no debida al calor)",
+        respuestas: ["Opción 0 En absoluto",
+                  "Opción 1 Levemente, no me molesta mucho",
+                  "Opción 2 Moderadamente, fue muy desagradable, pero podía soportarlo",
+                  "Opción 3 Severamente, casi no podía soportarlo"],
+        selected: 0,
+        type: 1 //"ansiedad"
+    },
+
+
+
+
+//Sección de estrés
+    {//1
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Traté de analizar las causas del problema para poder hacer frente",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//2
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Me convencí de que hiciese lo que hiciese las cosas siempre me saldrían mal",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//3
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Intenté centrarme en los aspecto positivos del problema",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//4
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Descargué mi mal humor con los demás",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//5
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Cuándo me venia a la cabeza el problema, trataba de concentrarme en otras cosas",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//6
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Le conté a mis familiares o amigos cómo me sentía",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//7
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Asistí a la iglesia",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//8
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Traté de solucionar el problema siguiendo unos pasos bien pensados",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//9
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    No hice nada concreto puesto que las cosas suelen ser malas",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//10
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Intenté sacar algo positivo del problema",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//11
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Insulté a ciertas personas",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//12
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Me volqué en el trabajo o en otra actividad para olvidarme del problema",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//13
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Pedí consejo a algún pariente o amigo para afrontar mejor el problema",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//14
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Pedí ayuda espiritual a algún pariente o amigo para afrontar mejor el problema",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//15
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Establecí un plan de actuación y procuré llevarlo a cabo",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//16
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Comprendí que yo fui el principal causante del problema",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//17
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Descubrí que en la vida hay cosas buenas y gente que se preocupa por los demás",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//18
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Me comporté de forma hostil con los demás",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//19
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Salí al cine, a cenar, a dar una vuelta, etc. para olvidarme del problema",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//20
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Pedí a parientes o amigos que me ayudaran a pensar acerca del problema",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//21
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Acudí a la iglesia para rogar que se solucionase el problema",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//22
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Hablé con las personas implicadas para encontrar una solución al problema",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//23
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Me sentí indefenso/a e incapaz de hacer algo positivo para cambiar la situación",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//24
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Comprendí que otras cosas, diferentes del problema, eran para mí más importantes",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//25
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Agredí a algunas personas",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//26
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Procuré no pensar en el problema",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//27
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Hablé con amigos o familiares para que me tranquilizaran cuando me encontraba mal",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//28
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Tuve fe en que Dios remediaría la situación",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//29
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Hice frente al problema poniendo en marcha varias soluciones concretas",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//30
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Hablé con amigos o familiares para que me tranquilizaran cuando me encontraba mal",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//31
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Experimenté personalmente eso de que "no hay mal que por bien no venga"",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//32
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Me irrité con alguna gente",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//33
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Practiqué algún deporte para olvidarme del problema",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//34
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                     Pedí a algún amigo o familiar que me indicara cuál sería el mejor camino a seguir",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//35
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Recé",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//36
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Pensé detenidamente los pasos a seguir para enfrentarme al problema",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//37
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Me resigné a aceptar las cosas como eran",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//38
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Comprobé que, después de todo, las cosas podían haber ocurrido peor",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//39
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Luché y me desahogué expresando mis sentimientos",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//40
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Intente olvidarme de todo",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//41
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Procuré que algún familiar o amigo me escuchase cuando necesité manifestar mis sentimientos",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+    {//42
+        pregunta: "¿Cómo se ha comportado habitualmente ante situaciones de estrés?
+                    Acudí a la iglesia para poner velas o rezar",
+        respuestas: ["Opción 0 Nunca",
+                  "Opción 1 Pocas veces",
+                  "Opción 2 A veces",
+                  "Opción 3 Frecuentemente",
+                  "Opción 4 Casi siempre"],
+        selected: 0,
+        type: 2 //"estrés"
+    },
+
+
+
+
+//Sección de estrés Parte 2
+    {//1
+        pregunta: "Imposibilidad de conciliar el sueño.
+                   Selecciona el grado experimentado durante los últimos 3 meses",
+        respuestas: ["Opción 1 Nunca",
+                  "Opción 2 Casi nunca",
+                  "Opción 3 Pocas veces",
+                  "Opción 4 Algunas veces",
+                  "Opción 5 Relativamente frecuente",
+                  "Opción 6 Muy frecuente"],
+        selected: 0,
+        type: 3 //"estrés Parte 2"
+    },
+    {//2
+        pregunta: "Jaquecas y dolores de cabeza.
+                   Selecciona el grado experimentado durante los últimos 3 meses",
+        respuestas: ["Opción 1 Nunca",
+                  "Opción 2 Casi nunca",
+                  "Opción 3 Pocas veces",
+                  "Opción 4 Algunas veces",
+                  "Opción 5 Relativamente frecuente",
+                  "Opción 6 Muy frecuente"],
+        selected: 0,
+        type: 3 //"estrés Parte 2"
+    },
+    {//3
+        pregunta: " Indigestiones o molestias gastrointestinales.
+                   Selecciona el grado experimentado durante los últimos 3 meses",
+        respuestas: ["Opción 1 Nunca",
+                  "Opción 2 Casi nunca",
+                  "Opción 3 Pocas veces",
+                  "Opción 4 Algunas veces",
+                  "Opción 5 Relativamente frecuente",
+                  "Opción 6 Muy frecuente"],
+        selected: 0,
+        type: 3 //"estrés Parte 2"
+    },
+    {//4
+        pregunta: "Sensación de cansancio extremo o agotamiento.
+                   Selecciona el grado experimentado durante los últimos 3 meses",
+        respuestas: ["Opción 1 Nunca",
+                  "Opción 2 Casi nunca",
+                  "Opción 3 Pocas veces",
+                  "Opción 4 Algunas veces",
+                  "Opción 5 Relativamente frecuente",
+                  "Opción 6 Muy frecuente"],
+        selected: 0,
+        type: 3 //"estrés Parte 2"
+    },
+    {//5
+        pregunta: "Tendencia de comer, beber o fumar más de lo habitual.
+                   Selecciona el grado experimentado durante los últimos 3 meses",
+        respuestas: ["Opción 1 Nunca",
+                  "Opción 2 Casi nunca",
+                  "Opción 3 Pocas veces",
+                  "Opción 4 Algunas veces",
+                  "Opción 5 Relativamente frecuente",
+                  "Opción 6 Muy frecuente"],
+        selected: 0,
+        type: 3 //"estrés Parte 2"
+    },
+    {//6
+        pregunta: "Tendencia de comer, beber o fumar más de lo habitual.
+                   Selecciona el grado experimentado durante los últimos 3 meses",
+        respuestas: ["Opción 1 Nunca",
+                  "Opción 2 Casi nunca",
+                  "Opción 3 Pocas veces",
+                  "Opción 4 Algunas veces",
+                  "Opción 5 Relativamente frecuente",
+                  "Opción 6 Muy frecuente"],
+        selected: 0,
+        type: 3 //"estrés Parte 2"
+    },
+    {//7
+        pregunta: "Disminución del interés sexual.
+                   Selecciona el grado experimentado durante los últimos 3 meses",
+        respuestas: ["Opción 1 Nunca",
+                  "Opción 2 Casi nunca",
+                  "Opción 3 Pocas veces",
+                  "Opción 4 Algunas veces",
+                  "Opción 5 Relativamente frecuente",
+                  "Opción 6 Muy frecuente"],
+        selected: 0,
+        type: 3 //"estrés Parte 2"
+    },
+    {//8
+        pregunta: "Respiración entrecortada o sensación de ahogo.
+                   Selecciona el grado experimentado durante los últimos 3 meses",
+        respuestas: ["Opción 1 Nunca",
+                  "Opción 2 Casi nunca",
+                  "Opción 3 Pocas veces",
+                  "Opción 4 Algunas veces",
+                  "Opción 5 Relativamente frecuente",
+                  "Opción 6 Muy frecuente"],
+        selected: 0,
+        type: 3 //"estrés Parte 2"
+    },
+    {//9
+        pregunta: "Disminución del apetito.
+                   Selecciona el grado experimentado durante los últimos 3 meses",
+        respuestas: ["Opción 1 Nunca",
+                  "Opción 2 Casi nunca",
+                  "Opción 3 Pocas veces",
+                  "Opción 4 Algunas veces",
+                  "Opción 5 Relativamente frecuente",
+                  "Opción 6 Muy frecuente"],
+        selected: 0,
+        type: 3 //"estrés Parte 2"
+    },
+    {//10
+        pregunta: "Temblores musculares (por ejemplo tics nerviosos o parpadeos).
+                   Selecciona el grado experimentado durante los últimos 3 meses",
+        respuestas: ["Opción 1 Nunca",
+                  "Opción 2 Casi nunca",
+                  "Opción 3 Pocas veces",
+                  "Opción 4 Algunas veces",
+                  "Opción 5 Relativamente frecuente",
+                  "Opción 6 Muy frecuente"],
+        selected: 0,
+        type: 3 //"estrés Parte 2"
+    },
+
+    {//11
+        pregunta: "Pinchazos o sensaciones dolorosas en distintas partes del cuerpo.
+                   Selecciona el grado experimentado durante los últimos 3 meses",
+        respuestas: ["Opción 1 Nunca",
+                  "Opción 2 Casi nunca",
+                  "Opción 3 Pocas veces",
+                  "Opción 4 Algunas veces",
+                  "Opción 5 Relativamente frecuente",
+                  "Opción 6 Muy frecuente"],
+        selected: 0,
+        type: 3 //"estrés Parte 2"
+    },
+    {//12
+        pregunta: "Tentaciones fuertes de no levantarse por la mañana.
+                   Selecciona el grado experimentado durante los últimos 3 meses",
+        respuestas: ["Opción 1 Nunca",
+                  "Opción 2 Casi nunca",
+                  "Opción 3 Pocas veces",
+                  "Opción 4 Algunas veces",
+                  "Opción 5 Relativamente frecuente",
+                  "Opción 6 Muy frecuente"],
+        selected: 0,
+        type: 3 //"estrés Parte 2"
+    },
+    {//13
+        pregunta: "Tendencias a sudar o palpitaciones.
+                   Selecciona el grado experimentado durante los últimos 3 meses",
+        respuestas: ["Opción 1 Nunca",
+                  "Opción 2 Casi nunca",
+                  "Opción 3 Pocas veces",
+                  "Opción 4 Algunas veces",
+                  "Opción 5 Relativamente frecuente",
+                  "Opción 6 Muy frecuente"],
+        selected: 0,
+        type: 3 //"estrés Parte 2"
+    },
