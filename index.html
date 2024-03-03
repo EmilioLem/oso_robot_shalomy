@@ -16,7 +16,7 @@
 
 
 <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
-
+<link rel="manifest" href="manifest.json">
 </head>
 <body>
     <div id="moreAudios">
@@ -60,5 +60,10 @@
     <script src="./webResources/theQuestionsArray.js"></script>
     <script src="./webResources/addUpContent.js"></script>
     <script src="./webResources/script.js"></script>
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
 </body>
 </html>
