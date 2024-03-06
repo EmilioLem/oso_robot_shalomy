@@ -8,6 +8,23 @@ body{
     background: black;
 }
 
+
+#musicButton{
+    color: white;
+    transition: color 0.5s ease-in-out;
+    transform: scale(1);/*Not necesary */
+    transition: transform 0.4s ease-in-out;
+}
+#musicButton.played{
+    background: lightblue;
+}
+#musicButton.zoomed {
+  transform: scale(1.1); /* Zoom level */
+  /* transform-origin: center center; Set origin for zooming */
+}
+
+
+
 .curlyText{
     font-family: 'Walter Turncoat', cursive;
     font-size: 2.5rem;

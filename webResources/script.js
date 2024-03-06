@@ -2,8 +2,19 @@
 var bkgAudio1 = document.getElementById("bkgAudio1");
 var isplaying = false;
 
-document.getElementById("hisOrHerOrHhhname").value = "";    
+let musicButton = document.getElementById("musicButton");
 
+musicButton.addEventListener("click", ()=>{
+    if(isplaying){
+        bkgAudio1.pause();
+    }else{
+        bkgAudio1.volume = 1;
+        bkgAudio1.play();
+    }
+    isplaying = !isplaying;
+    musicButton.classList.toggle("played");
+    musicButton.classList.toggle("zoomed");
+})
 
 function startMusicMain(){
     if(isplaying){
@@ -14,6 +25,15 @@ function startMusicMain(){
     }
     isplaying = !isplaying;
 }
+
+
+//#musicButton
+
+//.classList.toggle("visible");
+
+document.getElementById("hisOrHerOrHhhname").value = "";    
+
+
 
 addUpContent();
 //Sliding thing

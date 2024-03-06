@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet">
-
 <!-- https://fonts.google.com/specimen/Walter+Turncoat?query=Sideshow This is the "title" font -->
 
 
@@ -21,49 +20,55 @@
 <body>
     <div id="moreAudios">
         <audio id="click01" src="./webResources/audios/clickSound.mp3"></audio>
+        <audio src="./webResources/audios/secondBackgroundMusic.mp3" loop id="bkgAudio1"></audio>
     </div>
     
-    <div id="slidesContainer">
-        
-        
-        
-        
-        
-        <div class="slide">
-            <button class="highLight" onclick="startMusicMain()">
-                <!-- Poner la clase al botón en lugar del div, y poner padding i ajustar. -->
-                <p>Habilitar música</p>
-                <audio src="./webResources/audios/secondBackgroundMusic.mp3" loop id="bkgAudio1"></audio>
-            </button>
-            <h2 class="curlyText">Bienvenido al test emocional!</h2>
-            <img src="./webResources/images/babyYoda.png" alt="cute baby yoda" width="200px" id="yodaImg">
-            <img id="contInfo" src="./webResources/images/infoFull.jpeg" alt="contactInfoPsicologa" width="32%">
-            <br>
-            <input class="someInput" type="text" placeholder="Nombre y número de teléfono" id="hisOrHerOrHhhname">
+    
+    <div class="welcomeSlide">
+        <button id="musicButton" class="highLight" >
+            <!-- Poner la clase al botón en lugar del div, y poner padding i ajustar. -->
+            <p>Habilitar música</p>
+        </button>
+        <div id="testThing"></div>
+        <h2 class="curlyText">Bienvenido al test emocional!</h2>
+        <img src="./webResources/images/babyYoda.png" alt="cute baby yoda" width="200px" id="yodaImg">
+        <img id="contInfo" src="./webResources/images/infoFull.jpeg" alt="contactInfoPsicologa" width="32%">
+        <br>
+        <input class="someInput" type="text" placeholder="Nombre y número de teléfono" id="hisOrHerOrHhhname">
 
-            <br>
-            <!-- <input class="someInput" type="text" placeholder="IP adress of the ESP (optional)" id="theESPip">
-            <button onclick="startTelemetry()">ok</button> -->
-            
-            <div class="switchButtonsArea">
-                <!-- <button class="slideButton" onclick="switchSlide(false)">Anterior</button> -->
-                <button class="slideButton" onclick="switchSlide(true)">Siguiente</button>
-            </div>
+        <br>
+        <!-- <input class="someInput" type="text" placeholder="IP adress of the ESP (optional)" id="theESPip">
+        <button onclick="startTelemetry()">ok</button> -->
+        
+        <div class="switchButtonsArea">
+            <!-- <button class="slideButton" onclick="switchSlide(false)">Anterior</button> -->
+            <button class="slideButton" onclick="switchSlide(true)">Siguiente</button>
         </div>
-        
-        
-        
-        
     </div>
+
+
+
+
+
+
+    <!-- <div id="slidesContainer"> </div> -->
 
 
     <script src="./webResources/theQuestionsArray.js"></script>
     <script src="./webResources/addUpContent.js"></script>
     <script src="./webResources/script.js"></script>
     <script>
-        /*if('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js');
-        }*/
+
+        const contentContainer = document.getElementById("testThing");
+        fetch("extraCode.html")
+          .then(response => response.text())
+          .then(data => {
+            contentContainer.innerHTML = data;
+          })
+          .catch(error => {
+            console.error("Error fetching content:", error);
+          });
+
     </script>
 </body>
 </html>
