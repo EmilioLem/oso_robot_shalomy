@@ -60,7 +60,8 @@
     <script>
 
         const contentContainer = document.getElementById("testThing");
-        fetch("extraCode.html")
+        //Is it possible to load a json object with fetch???
+        fetch(".extraCode.html")
           .then(response => response.text())
           .then(data => {
             contentContainer.innerHTML = data;

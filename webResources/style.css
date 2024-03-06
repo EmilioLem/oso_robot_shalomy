@@ -1,5 +1,5 @@
 *{
-    color: black;
+    color: white;
     text-align: center;
     font-size: 1.3rem;
     font-family: 'Playpen Sans';
@@ -9,8 +9,10 @@ body{
 }
 
 
-#musicButton{
-    color: white;
+#musicButton, #musicButton>p{
+    /* This is akward, should be able to select both on a single line */
+    color: black;
+    background-color: white;
     transition: color 0.5s ease-in-out;
     transform: scale(1);/*Not necesary */
     transition: transform 0.4s ease-in-out;
