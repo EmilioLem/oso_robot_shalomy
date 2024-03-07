@@ -1,59 +1,40 @@
 
 var bkgAudio1 = document.getElementById("bkgAudio1");
-var isplaying = false;
+let mB = document.getElementById("musicButton");
 
-let musicButton = document.getElementById("musicButton");
-
-musicButton.addEventListener("click", ()=>{
-    if(isplaying){
+mB.addEventListener("click", ()=>{
+    if(mB.classList.contains("playing")){
         bkgAudio1.pause();
     }else{
         bkgAudio1.volume = 1;
         bkgAudio1.play();
     }
-    isplaying = !isplaying;
-    musicButton.classList.toggle("played");
-    musicButton.classList.toggle("zoomed");
-})
-
-function startMusicMain(){
-    if(isplaying){
-        bkgAudio1.pause();
-    }else{
-        bkgAudio1.volume = 1;
-        bkgAudio1.play();
-    }
-    isplaying = !isplaying;
-}
-
-
-//#musicButton
-
-//.classList.toggle("visible");
-
-document.getElementById("hisOrHerOrHhhname").value = "";    
+    mB.classList.toggle("playing");
+});
+ 
 
 
 
-addUpContent();
-//Sliding thing
-var slides = document.querySelectorAll(".slide");
+//addUpContent();
 var currentSlide = 0;
+
 function showSlide(index){
+    var slides = document.querySelectorAll(".slide");
     for(let i=0; i<slides.length; i++){
         slides[i].style.display = "none";
     }
     slides[index].style.display = "block";
 }
+
 function switchSlide(isNextSlide){
+    var slides = document.querySelectorAll(".slide");
     document.getElementById("click01").play();
     if(isNextSlide){
         if (currentSlide < slides.length - 1) {
-            console.log(`current slide: ${currentSlide}`);
-            currentSlide++; // Update the captured currentSlide value
-            console.log(`new slide: ${currentSlide}`);
+            currentSlide++;
             showSlide(currentSlide);
         } else {
+            alert("You did it!! finished");
             let request = sendAnswersToServer();
             if(request[0]){
                 alert(request[1]);
@@ -64,9 +45,7 @@ function switchSlide(isNextSlide){
         }
     }else{
         if (currentSlide > 0) {
-            console.log(`current slide: ${currentSlide}`);
-            currentSlide--; // Update the captured currentSlide value
-            console.log(`new slide: ${currentSlide}`);
+            currentSlide--;
             showSlide(currentSlide);
         }
     }
@@ -93,8 +72,3 @@ function startTelemetry(){
     });
 }
 
-document.addEventListener('dblclick', ()=>{
-    document.documentElement.requestFullscreen().catch((e)=>{
-        alert(e);
-    })
-})

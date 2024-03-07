@@ -1,5 +1,5 @@
 *{
-    color: white;
+    color: black;
     text-align: center;
     font-size: 1.3rem;
     font-family: 'Playpen Sans';
@@ -11,18 +11,17 @@ body{
 
 #musicButton, #musicButton>p{
     /* This is akward, should be able to select both on a single line */
+    /* Also... the transition should only affect the button, not the text */
     color: black;
     background-color: white;
     transition: color 0.5s ease-in-out;
     transform: scale(1);/*Not necesary */
     transition: transform 0.4s ease-in-out;
 }
-#musicButton.played{
+#musicButton.playing{
     background: lightblue;
-}
-#musicButton.zoomed {
-  transform: scale(1.1); /* Zoom level */
-  /* transform-origin: center center; Set origin for zooming */
+    transform: scale(1.1); /* Zoom level */
+    /* transform-origin: center center; Set origin for zooming */
 }
 
 
@@ -172,14 +171,15 @@ body{
     display: none;
     height: 96vh;
     background: linear-gradient(45deg, #FF5733, #3E64FF, #33FF57);
+    margin: 0;
     /* background: radial-gradient(circle, #FF5733, #3E64FF, #33FF57); NEVER!!!!! */
     /* background: conic-gradient(#FF5733, #3E64FF, #33FF57);  Still pretty bad*/
 
 
 }
-.slide:first-child {
+/* .slide:first-child { 
     display: block;
-}
+}*/
 .switchButtonsArea {
     position: fixed;
     bottom: 10px; /* Adjust the distance from the bottom as needed */

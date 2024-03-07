@@ -1,0 +1,5 @@
+- Remove akward background color on music button
+- Make sound interactions asynchronous
+- Activate smooth color transition for music button
+
+* Settings -> Editor => Glyph Marging: off
