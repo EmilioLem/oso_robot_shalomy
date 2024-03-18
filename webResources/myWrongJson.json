@@ -1,4 +1,4 @@
-
+[
 {
     "question": "Tristeza",
     "answers": ["No me siento triste",
@@ -227,8 +227,9 @@
 
 
 
-//Sección de ansiedad
+
 {
+    "///":"Sección de ansiedad",
     "question": "Hormigueo o entumecimiento",
     "answers": ["En absoluto",
               "Levemente, no me molesta mucho",
@@ -442,8 +443,9 @@
 
 
 
-//Sección de estrés
+
 {
+    "///":"Sección de estrés",
     "question": "¿Cómo se ha comportado habitualmente ante situaciones de estrés?                    Traté de analizar las causas del problema para poder hacer frente",
     "answers": ["Nunca",
               "Pocas veces",
@@ -909,8 +911,9 @@
 
 
 
-//Sección de estrés Parte 2
+
 {
+    "///":"Sección de estrés Parte 2",
     "question": "Imposibilidad de conciliar el sueño.                   Selecciona el grado experimentado durante los últimos 3 meses",
     "answers": ["Nunca",
               "Casi nunca",
@@ -1066,5 +1069,5 @@
     "selected": 0,
     "type": 3 ,
     "//":"estrés Parte 2"
-},
 }
+]

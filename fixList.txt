@@ -2,4 +2,7 @@
 - Make sound interactions asynchronous
 - Activate smooth color transition for music button
 
+- A "Go to Home" Menu is required
+- From there, add some "sub-test" 
+
 * Settings -> Editor => Glyph Marging: off
