@@ -3,6 +3,8 @@
 - Activate smooth color transition for music button
 
 - A "Go to Home" Menu is required
+- Enable "reload" button at homme
 - From there, add some "sub-test" 
+- Setup each section so at the end of any of them, a mail with answers is send.
 
 * Settings -> Editor => Glyph Marging: off
