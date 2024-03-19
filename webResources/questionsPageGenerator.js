@@ -6,7 +6,6 @@ fs.readFile('myWrongJson.json', 'utf8', (err, data) => {
         console.error('Error reading file:', err);
         return;
     }
-
     try {
         const questions = JSON.parse(data);
         generateHTML(questions);
@@ -35,6 +34,7 @@ function generateHTML(questions) {
 
         htmlContent += `    </div>\n`;
         htmlContent += `    <div class="switchButtonsArea">\n`;
+        htmlContent += `        <button class="slideButton" onclick="goHome()">GoHome</button>\n`;
         htmlContent += `        <button class="slideButton" onclick="switchSlide(false)">Anterior</button>\n`;
         htmlContent += `        <button class="slideButton" onclick="switchSlide(true)">Siguiente</button>\n`;
         htmlContent += `    </div>\n`;

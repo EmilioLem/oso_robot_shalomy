@@ -13,9 +13,6 @@ mB.addEventListener("click", ()=>{
 });
  
 
-
-
-//addUpContent();
 var currentSlide = 0;
 
 function showSlide(index){
@@ -28,7 +25,8 @@ function showSlide(index){
 
 function switchSlide(isNextSlide){
     var slides = document.querySelectorAll(".slide");
-    document.getElementById("click01").play();
+    //document.getElementById("click01").play();
+    playSound("./webResources/audios/clickSound.mp3");
     if(isNextSlide){
         if (currentSlide < slides.length - 1) {
             currentSlide++;
@@ -49,6 +47,14 @@ function switchSlide(isNextSlide){
             showSlide(currentSlide);
         }
     }
+}
+function goHome(){
+    var slides = document.querySelectorAll(".slide");
+    //document.getElementById("click01").play();
+    playSound("./webResources/audios/clickSound.mp3");
+
+    currentSlide = 0;
+    showSlide(currentSlide);
 }
 
 function startTelemetry(){
@@ -72,3 +78,19 @@ function startTelemetry(){
     });
 }
 
+function playSound(audioFileUrl) {
+  const audioCtx = new AudioContext(); // Create new AudioContext
+
+  // Load the sound asynchronously
+  fetch(audioFileUrl)
+    .then(response => response.arrayBuffer())
+    .then(arrayBuffer => audioCtx.decodeAudioData(arrayBuffer))
+    .then(audioBuffer => {
+      const source = audioCtx.createBufferSource(); // Create a source node
+      source.buffer = audioBuffer; // Assign the decoded audio buffer
+      source.connect(audioCtx.destination); // Connect to output
+      source.start(); // Start playback
+    })
+    .catch(error => console.error("Error loading sound:", error));
+}
+  
