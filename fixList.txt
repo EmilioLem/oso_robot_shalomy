@@ -1,4 +1,11 @@
-- From there, add some "sub-test" 
+Each question must have a radio button "hidden", just displaying the cuttonButton and paragraph.
+* The cutton button is arranged iteratevily, lie gemini says.
+
+https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_radio
+
+https://formspree.io/forms/xayrdbln/integration
+
+
 - Setup each section so at the end of any of them, a mail with answers is send.
 
 - GitHub page, is on another branch for testing, return it
