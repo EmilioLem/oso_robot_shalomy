@@ -1,0 +1,174 @@
+*{
+    color: black;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Playpen Sans';
+}
+body{
+    background: black;
+}
+
+.curlyText{
+    font-family: 'Walter Turncoat', cursive;
+    font-size: 2.5rem;
+}
+#contInfo{
+    position: absolute;
+    left: 5%;
+    top: 35%;
+}
+
+.svg-container{
+    background: none;    
+}
+
+.highLight{
+    color: gray;
+    padding: 2mm;
+    border-radius: 5mm;
+    height: min-content;
+    margin: 3px;
+}
+.highLight > p{
+    margin: 0;
+}
+.someInput{
+    background: rgba(255, 200, 62, 0.532);
+}
+.someInput::placeholder{
+    color: black;
+}
+
+:root{
+    --xButtonLeft: 5%;
+    --xButtonRight: 50%;
+    --yButtonUp: 23%;
+    --yButtonDown: 55%;
+
+    --yButtonSuperDown: 80%;
+    --yButtonMiddle: 39%; /*checar*/
+
+    --xTextLeft: 13%;
+    --xTextRight: 60%;
+    --yTextUp: 21%;
+    --yTextDown: 50%;
+
+    --yTextSuperDown: 74%;
+    --yTextMiddle: 37%; /*checar*/
+    --colorNoSeleccionada: #d9d9d9;
+
+}
+.answer{
+    border: 1mm solid gray;
+    border-radius: 7mm;
+    width: 33%;
+    padding: 1mm;
+    display: block;
+    font-size: 1.1rem;
+    background: rgba(51, 255, 88, 0.33);
+}
+
+.cuttonButton0{
+    position: absolute;
+    top: var(--yButtonUp);
+    left: var(--xButtonLeft);
+}
+.cuttonButton1{
+    position: absolute;
+    top: var(--yButtonUp);
+    left: var(--xButtonRight);
+}
+.cuttonButton2{
+    position: absolute;
+    top: var(--yButtonDown);
+    left: var(--xButtonLeft);
+}
+.cuttonButton3{
+    position: absolute;
+    top: var(--yButtonDown);
+    left: var(--xButtonRight);
+}
+.cuttonButton4{
+    position: absolute;
+    top: var(--yButtonSuperDown);
+    left: var(--xButtonLeft);
+}
+.cuttonButton5{
+    position: absolute;
+    top: var(--yButtonMiddle);
+    left: var(--xButtonLeft);
+}
+.cuttonButton6{
+    position: absolute;
+    top: var(--yButtonMiddle);
+    left: var(--xButtonRight);
+}
+
+.textButton0{
+    position: absolute;
+    top: var(--yTextUp);
+    left: var(--xTextLeft);
+    background: #aed6f1;
+}
+.textButton1{
+    position: absolute;
+    top: var(--yTextUp);
+    left: var(--xTextRight);
+    background: #2980b9;
+}
+.textButton2{
+    position: absolute;
+    top: var(--yTextDown);
+    left: var(--xTextLeft);
+    background: #f1c40f;
+}
+.textButton3{
+    position: absolute;
+    top: var(--yTextDown);
+    left: var(--xTextRight);
+    background: #ff5757;
+}
+.textButton4{
+    position: absolute;
+    top: var(--yTextSuperDown);
+    left: var(--xTextLeft);
+    background: #dd1212;
+}
+.textButton5{
+    position: absolute;
+    top: var(--yTextMiddle);
+    left: var(--xTextLeft);
+    background: #5e17eb;
+}
+.textButton6{
+    position: absolute;
+    top: var(--yTextMiddle);
+    left: var(--xTextRight);
+}
+
+
+
+/* Initially hide all slides except the first one */
+.slide {
+    display: none;
+    height: 96vh;
+    background: linear-gradient(45deg, #FF5733, #3E64FF, #33FF57);
+    /* background: radial-gradient(circle, #FF5733, #3E64FF, #33FF57); NEVER!!!!! */
+    /* background: conic-gradient(#FF5733, #3E64FF, #33FF57);  Still pretty bad*/
+
+
+}
+.slide:first-child {
+    display: block;
+}
+.switchButtonsArea {
+    position: fixed;
+    bottom: 10px; /* Adjust the distance from the bottom as needed */
+    right: 10px; /* Adjust the distance from the right as needed */
+}
+.switchButtonsArea > .slideButton{
+    font-size: 1.6rem;
+    background: rgba(42, 153, 165, 0.875);
+}
+
+/* https://htmlcheatsheet.com/css/ */

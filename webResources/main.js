@@ -1,0 +1,132 @@
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')//('/ground-eye-analysis/service-worker.js')
+            .then(registration => {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(error => {
+                console.log('ServiceWorker registration failed: ', error);
+            });
+    });
+}
+
+
+
+
+
+const videoElement = document.getElementById('camera-stream');
+
+const toggleCameraBtn = document.getElementById('toggle-camera-btn');
+const measurementBtn = document.getElementById('take-measurement-btn');
+const downloadBtn = document.getElementById('download-btn');
+
+const photosT = document.getElementById("photosT");
+const emotionS = document.getElementById("emotionS");
+//Make an event listener, alert the state, and save the image with prefix. 
+//After every participant, ask to save and... delete current images.
+
+const canvas = document.getElementById("canvas");
+
+let mediaStream = null; // Store media stream reference
+let isCameraOn = false; // Boolean to track camera state
+
+let capturedImages = [];
+
+
+toggleCameraBtn.addEventListener('click', async () => {
+  if (isCameraOn) {
+    
+    videoElement.srcObject = null; // Stop video source
+    //videoElement.style.display = 'none';
+    mediaStream.getTracks().forEach(track => track.stop()); // Stop media tracks
+    isCameraOn = false;
+    toggleCameraBtn.textContent = 'Open Camera';
+  } else {
+    try {
+      //Loving this: https://upload.wikimedia.org/wikipedia/commons/0/0c/Vector_Video_Standards8.svg
+      //Potentially scalable to SQFHD 1920*1920
+      const constraints = {
+        video: {
+          facingMode: "environment", //// Instagram square format
+          width: { ideal: 1920}, //min: 1080, ideal: 1080, max: 1080 
+          height: { idea: 1080}, //min: 1080, ideal: 1080, max: 1080 
+          aspectRatio: 1
+        }
+      };
+      mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
+      videoElement.srcObject = mediaStream;
+      //videoElement.style.display = 'block';
+      isCameraOn = true;
+      toggleCameraBtn.textContent = 'Close Camera';
+      /*setInterval(()=>{
+          const xSize = canvas.width = videoElement.videoWidth;
+          const ySize = canvas.height = videoElement.videoHeight;
+          const context = canvas.getContext('2d');
+      
+      
+          context.drawImage(videoElement, 0, 0, xSize, ySize);
+      },100);*/
+    } catch (error) {
+      console.error('Error accessing camera:', error);
+    }
+  }
+});
+
+document.getElementById("resetB").addEventListener('click', ()=>{
+    capturedImages = [];
+    photosT.innerText = "0";
+    canvas.style.display='none';
+
+})
+
+measurementBtn.addEventListener('click', async () => {
+    console.time('Total time');
+    
+    if (isCameraOn && videoElement.readyState >= 2) {
+        canvas.style.display='block';
+        const xSize = canvas.width = videoElement.videoWidth;
+        const ySize = canvas.height = videoElement.videoHeight;
+        const context = canvas.getContext('2d');
+
+
+        context.drawImage(videoElement, 0, 0, xSize, ySize);
+
+        console.log(`Size is ${xSize} and ${ySize}`);
+        
+
+        const imageData = canvas.toDataURL('image/png');
+        capturedImages.push(imageData);
+        photosT.innerText = String(capturedImages.length);
+
+        if (capturedImages.length === 10) {
+            alert('Captured 10 images, ready to download!');
+        }
+
+        //videoElement.style.visibility="hidden";
+
+   }else{
+        alert("Open the camera first");
+   }
+   console.timeEnd('Total time');
+});
+
+downloadBtn.addEventListener('click', () => {
+    if (capturedImages.length === 0) {
+        alert('No images to download!');
+        return;
+    }
+
+    const zip = new JSZip();
+    capturedImages.forEach((dataUrl, index) => {
+        const imgData = dataUrl.split(',')[1]; // Remove data URL prefix
+        zip.file(`image${index + 1}.png`, imgData, { base64: true });
+    });
+
+    zip.generateAsync({ type: 'blob' })
+        .then(content => {
+            saveAs(content, 'images.zip');
+        })
+        .catch(err => {
+            console.error('Failed to generate zip:', err);
+        });
+});

@@ -1,0 +1,2 @@
+"start_url": "/oso_robot_shalomy/index.html",
+

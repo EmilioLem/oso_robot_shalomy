@@ -1,0 +1,24 @@
+body{
+    background: linear-gradient(45deg, #FF5733, #3E64FF, #33FF57);
+    color: black;
+    /* font-size: 1.5rem; */
+    height: 98vh;
+}
+*{
+    font-size: 3vmin;
+}
+#camera-stream, #canvas {
+    /*transform: scale(0.2); /* Reduce video display size by 5 times */
+    width: auto; /* Scale video to fit container */
+    height: 20vmin;
+    /* Warning... long devices are a thing */
+    margin: 5px;
+}
+#canvas{
+    display: none;
+}
+
+
+/*button{
+    font-size: 3vmin;
+}*/
