@@ -1,20 +1,22 @@
 {
-    "short_name": "Shalomy",
-    "name": "Shalomy Web App",
+  "name": "Shalomy web app",
+  "short_name": "Shalomy",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "description": "Web interface for bear",
     "icons": [
       {
-        "src": "icon-72x72.png",
+        "src": "webResources/images/icon-72x72.png",
         "sizes": "72x72",
         "type": "image/png"
       },
       {
-        "src": "icon-192x192.png",
+        "src": "webResources/images/icon-192x192.png",
         "sizes": "192x192",
         "type": "image/png"
       }
-    ],
-    "start_url": "/oso_robot_shalomy/index.html",
-    "display": "standalone",
-    "theme_color": "#ffffff"
+    ]
   }
   

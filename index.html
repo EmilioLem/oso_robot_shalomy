@@ -3,67 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TestEmocional</title>
-    <link rel="stylesheet" href="./webResources/style.css">
-    <link rel="shortcut icon" href="./webResources/images/favicon.ico" type="images/x-icon">
-    <!-- https://favicon.io/ -->
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet">
-
-<!-- https://fonts.google.com/specimen/Walter+Turncoat?query=Sideshow This is the "title" font -->
-
-
-<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
-<link rel="manifest" href="manifest.json">
+    <meta name="description" content="oso-robot-shalomy">
+    <title>Shalomy</title>
+    <link rel="stylesheet" href="./webResources/styles.css">
+    <link rel="icon" type="image/x-icon" href="./webResources/images/favicon.ico">
+    <link rel="manifest" href="./manifest.json">
 </head>
 <body>
-    <div id="moreAudios">
-        <audio id="click01" src="./webResources/audios/clickSound.mp3"></audio>
+    
+
+    <video id="camera-stream" autoplay muted></video>
+    <br>
+    <img src="./webResources/images/psicoLogo.png" alt="Psicopedagigía logo">
+    <br>
+    <canvas id="canvas"></canvas>
+    <br>
+    
+    
+
+        
+        
+        <button id="toggle-camera-btn">Open Camera</button>
+        <button id="take-measurement-btn">Take Measurement</button>
+        <button id="download-btn">Download Images</button>
     </div>
     
-    <div id="slidesContainer">
-        
-        
-        
-        
-        
-        <div class="slide">
-            <button class="highLight" onclick="startMusicMain()">
-                <!-- Poner la clase al botón en lugar del div, y poner padding i ajustar. -->
-                <p>Habilitar música</p>
-                <audio src="./webResources/audios/secondBackgroundMusic.mp3" loop id="bkgAudio1"></audio>
-            </button>
-            <h2 class="curlyText">Bienvenido al test emocional!</h2>
-            <img src="./webResources/images/babyYoda.png" alt="cute baby yoda" width="200px" id="yodaImg">
-            <img id="contInfo" src="./webResources/images/infoFull.jpeg" alt="contactInfoPsicologa" width="32%">
-            <br>
-            <input class="someInput" type="text" placeholder="Nombre y número de teléfono" id="hisOrHerOrHhhname">
 
-            <br>
-            <!-- <input class="someInput" type="text" placeholder="IP adress of the ESP (optional)" id="theESPip">
-            <button onclick="startTelemetry()">ok</button> -->
-            
-            <div class="switchButtonsArea">
-                <!-- <button class="slideButton" onclick="switchSlide(false)">Anterior</button> -->
-                <button class="slideButton" onclick="switchSlide(true)">Siguiente</button>
-            </div>
-        </div>
-        
-        
-        
-        
-    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
-
-    <script src="./webResources/theQuestionsArray.js"></script>
-    <script src="./webResources/addUpContent.js"></script>
-    <script src="./webResources/script.js"></script>
-    <script>
-        /*if('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js');
-        }*/
-    </script>
+    <script src="./webResources/main.js"></script>
 </body>
 </html>
