@@ -20,8 +20,8 @@ const toggleCameraBtn = document.getElementById('toggle-camera-btn');
 const measurementBtn = document.getElementById('take-measurement-btn');
 const downloadBtn = document.getElementById('download-btn');
 
-const photosT = document.getElementById("photosT");
-const emotionS = document.getElementById("emotionS");
+const photosT = document.getElementById("photosT"); //photos taken
+const emotionS = document.getElementById("emotionS"); //emotions selector
 //Make an event listener, alert the state, and save the image with prefix. 
 //After every participant, ask to save and... delete current images.
 
@@ -31,23 +31,23 @@ let mediaStream = null; // Store media stream reference
 let isCameraOn = false; // Boolean to track camera state
 
 let capturedImages = [];
+let storedNumber = localStorage.getItem('myNumber');
+let myNumber = storedNumber !== null ? parseInt(storedNumber) : 0;
 
 
 toggleCameraBtn.addEventListener('click', async () => {
   if (isCameraOn) {
     
-    videoElement.srcObject = null; // Stop video source
+    videoElement.srcObject = null;
     //videoElement.style.display = 'none';
-    mediaStream.getTracks().forEach(track => track.stop()); // Stop media tracks
+    mediaStream.getTracks().forEach(track => track.stop());
     isCameraOn = false;
     toggleCameraBtn.textContent = 'Open Camera';
   } else {
     try {
-      //Loving this: https://upload.wikimedia.org/wikipedia/commons/0/0c/Vector_Video_Standards8.svg
-      //Potentially scalable to SQFHD 1920*1920
       const constraints = {
         video: {
-          facingMode: "environment", //// Instagram square format
+          facingMode: "user", // environment
           width: { ideal: 1920}, //min: 1080, ideal: 1080, max: 1080 
           height: { idea: 1080}, //min: 1080, ideal: 1080, max: 1080 
           aspectRatio: 1
@@ -75,7 +75,8 @@ toggleCameraBtn.addEventListener('click', async () => {
 document.getElementById("resetB").addEventListener('click', ()=>{
     capturedImages = [];
     photosT.innerText = "0";
-    canvas.style.display='none';
+    emotionS.value = "a";
+    //canvas.style.display='none';
 
 })
 
@@ -83,7 +84,7 @@ measurementBtn.addEventListener('click', async () => {
     console.time('Total time');
     
     if (isCameraOn && videoElement.readyState >= 2) {
-        canvas.style.display='block';
+        //canvas.style.display='block';
         const xSize = canvas.width = videoElement.videoWidth;
         const ySize = canvas.height = videoElement.videoHeight;
         const context = canvas.getContext('2d');
@@ -93,34 +94,34 @@ measurementBtn.addEventListener('click', async () => {
 
         console.log(`Size is ${xSize} and ${ySize}`);
         
-
         const imageData = canvas.toDataURL('image/png');
-        capturedImages.push(imageData);
+        capturedImages.push([imageData, emotionS.value]);
         photosT.innerText = String(capturedImages.length);
-
-        if (capturedImages.length === 10) {
-            alert('Captured 10 images, ready to download!');
+        
+        /*if (capturedImages.length === 10) {
+          alert('Captured 10 images, ready to download!');
+          }*/
+         //videoElement.style.visibility="hidden";
+         
+        }else{
+          alert("Open the camera first");
         }
-
-        //videoElement.style.visibility="hidden";
-
-   }else{
-        alert("Open the camera first");
-   }
-   console.timeEnd('Total time');
-});
-
-downloadBtn.addEventListener('click', () => {
-    if (capturedImages.length === 0) {
-        alert('No images to download!');
-        return;
-    }
-
-    const zip = new JSZip();
-    capturedImages.forEach((dataUrl, index) => {
-        const imgData = dataUrl.split(',')[1]; // Remove data URL prefix
-        zip.file(`image${index + 1}.png`, imgData, { base64: true });
-    });
+        console.timeEnd('Total time');
+      });
+      
+      downloadBtn.addEventListener('click', () => {
+        if (capturedImages.length === 0) {
+          alert('No images to download!');
+          return;
+        }
+        
+        const zip = new JSZip();
+        capturedImages.forEach((photo, index) => {
+          const imgData = photo[0].split(',')[1]; // Remove data URL prefix
+          myNumber++; 
+          localStorage.setItem('myNumber', myNumber);
+          zip.file(`${String(myNumber)}_${photo[1]}_${index + 1}.png`, imgData, { base64: true });
+        });
 
     zip.generateAsync({ type: 'blob' })
         .then(content => {
