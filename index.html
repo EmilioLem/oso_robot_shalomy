@@ -14,14 +14,15 @@
 
     <video id="camera-stream" autoplay muted></video>
     <br>
-    <img src="./webResources/images/psicoLogo.png" alt="Psicopedagigía logo">
+    <img src="./webResources/images/psicoLogo.png" alt="Psicopedagigía logo" id="psicoPlogo">
     <br>
     <canvas id="canvas"></canvas>
     <br>
     
     
 
-        
+    <div id="settingsDiv">
+
         <select id="emotionS">
             <option value="a" selected>alegría</option>
             <option value="e">enojo</option>
@@ -35,7 +36,8 @@
         <button id="take-measurement-btn">Take Measurement</button>
         <p>Photos taken: <span id="photosT">0</span>     <button id="resetB">Reset</button></p>
         <button id="download-btn">Download Images</button>
-    </div>
+        
+    </div>    
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>

@@ -30,7 +30,7 @@ const canvas = document.getElementById("canvas");
 let mediaStream = null; // Store media stream reference
 let isCameraOn = false; // Boolean to track camera state
 
-let capturedImages = [];
+let capturedImages = [], aName = '';
 let storedNumber = localStorage.getItem('myNumber');
 let myNumber = storedNumber !== null ? parseInt(storedNumber) : 0;
 
@@ -73,61 +73,67 @@ toggleCameraBtn.addEventListener('click', async () => {
 });
 
 document.getElementById("resetB").addEventListener('click', ()=>{
-    capturedImages = [];
-    photosT.innerText = "0";
-    emotionS.value = "a";
-    //canvas.style.display='none';
+  do {
+    aName = prompt("Nombre del nuevo participante:");
+    if(aName == null) return;
+  }while (aName == '');
+  console.log(aName);
 
-})
+  capturedImages = [];
+  photosT.innerText = "0";
+  emotionS.value = "a";
+  //canvas.style.display='none';
+  //aName = prompt("Nombre del nuevo participante:");
+});
 
 measurementBtn.addEventListener('click', async () => {
-    console.time('Total time');
-    
-    if (isCameraOn && videoElement.readyState >= 2) {
-        //canvas.style.display='block';
-        const xSize = canvas.width = videoElement.videoWidth;
-        const ySize = canvas.height = videoElement.videoHeight;
-        const context = canvas.getContext('2d');
-
-
-        context.drawImage(videoElement, 0, 0, xSize, ySize);
-
-        console.log(`Size is ${xSize} and ${ySize}`);
-        
-        const imageData = canvas.toDataURL('image/png');
-        capturedImages.push([imageData, emotionS.value]);
-        photosT.innerText = String(capturedImages.length);
-        
-        /*if (capturedImages.length === 10) {
-          alert('Captured 10 images, ready to download!');
-          }*/
-         //videoElement.style.visibility="hidden";
-         
-        }else{
-          alert("Open the camera first");
-        }
-        console.timeEnd('Total time');
-      });
+  console.time('Total time');
+  
+  if (isCameraOn && videoElement.readyState >= 2) {
+    //canvas.style.display='block';
+    const xSize = canvas.width = videoElement.videoWidth;
+    const ySize = canvas.height = videoElement.videoHeight;
+    const context = canvas.getContext('2d');
+    //
+    //
+    context.drawImage(videoElement, 0, 0, xSize, ySize);
+    // 
+    console.log(`Size is ${xSize} and ${ySize}`);
+    //
+    const imageData = canvas.toDataURL('image/png');
+    capturedImages.push([imageData, emotionS.value]);
+    photosT.innerText = String(capturedImages.length);
+    //
+    /*if (capturedImages.length === 10) {
+      alert('Captured 10 images, ready to download!');
+      }*/
+     //videoElement.style.visibility="hidden";
+     
+  }else{
+    alert("Open the camera first");
+  }
+  console.timeEnd('Total time');
+});
       
-      downloadBtn.addEventListener('click', () => {
-        if (capturedImages.length === 0) {
-          alert('No images to download!');
-          return;
-        }
-        
-        const zip = new JSZip();
-        capturedImages.forEach((photo, index) => {
-          const imgData = photo[0].split(',')[1]; // Remove data URL prefix
-          myNumber++; 
-          localStorage.setItem('myNumber', myNumber);
-          zip.file(`${String(myNumber)}_${photo[1]}_${index + 1}.png`, imgData, { base64: true });
-        });
-
-    zip.generateAsync({ type: 'blob' })
-        .then(content => {
-            saveAs(content, 'images.zip');
-        })
-        .catch(err => {
-            console.error('Failed to generate zip:', err);
-        });
+downloadBtn.addEventListener('click', () => {
+  if (capturedImages.length === 0) {
+    alert('No images to download!');
+    return;
+  }
+  //
+  const zip = new JSZip();
+  capturedImages.forEach((photo, index) => {
+    const imgData = photo[0].split(',')[1]; // Remove data URL prefix
+    myNumber++; 
+    localStorage.setItem('myNumber', myNumber);
+    zip.file(`${String(myNumber)}_${photo[1]}_${index + 1}.png`, imgData, { base64: true });
+  });
+  //
+  zip.generateAsync({ type: 'blob' })
+    .then(content => {
+        saveAs(content, `images_${aName}.zip`);
+    })
+    .catch(err => {
+        console.error('Failed to generate zip:', err);
+    });
 });

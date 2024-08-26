@@ -2,24 +2,53 @@ body{
     background: linear-gradient(45deg, #FF5733, #3E64FF, #33FF57);
     color: black;
     /* font-size: 1.5rem; */
-    height: 98vh;
+    /* height: 98vh; */
+    margin: 0; /* Remove default body margin */
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+    background: linear-gradient(45deg, #FF5733, #3E64FF, #33FF57);
+    background-size: cover; /* Make sure the gradient covers the entire body without repeating */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 *{
     font-size: 3vmin;
 }
+
+#psicoPlogo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 25vmin;
+}
 #camera-stream, #canvas {
     /*transform: scale(0.2); /* Reduce video display size by 5 times */
-    width: auto; /* Scale video to fit container */
-    height: 20vmin;
     /* Warning... long devices are a thing */
     margin: 5px;
+}
+#camera-stream{
+    position: absolute;
+    height: 10vmin; 
+    width: auto;
+    /*width: 60vw;
+    height: auto;*/
+    top: 20px;
+    left: 20px;
 }
 #canvas{
     /* display: none; */
     border: 3px dashed yellowgreen;
+    height: 50vmin;
+    width: auto; 
+
 }
 
-
-/*button{
-    font-size: 3vmin;
-}*/
+#settingsDiv{
+    position: absolute;
+    /* height: 10vmin; 
+    width: auto;*/
+    bottom: 20px;
+    left: 20px;
+}
