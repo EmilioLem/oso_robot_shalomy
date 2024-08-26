@@ -48,8 +48,8 @@ toggleCameraBtn.addEventListener('click', async () => {
       const constraints = {
         video: {
           facingMode: "user", // environment
-          width: { ideal: 1080},//1920}, //min: 1080, ideal: 1080, max: 1080 
-          height: { ideal: 720},//1080}, //min: 1080, ideal: 1080, max: 1080 
+          width: 640,//{ ideal: 1080},//1920}, //min: 1080, ideal: 1080, max: 1080 
+          height: 480,//{ ideal: 720},//1080}, //min: 1080, ideal: 1080, max: 1080 
           aspectRatio: 1
         }
       };
@@ -129,7 +129,7 @@ measurementBtn.addEventListener('click', async () => {
   //
 });
       
-downloadBtn.addEventListener('click', () => {
+/*downloadBtn.addEventListener('click', () => {
   if (capturedImages.length === 0) {
     alert('No images to download!');
     return;
@@ -150,4 +150,21 @@ downloadBtn.addEventListener('click', () => {
     .catch(err => {
         console.error('Failed to generate zip:', err);
     });
+});*/
+downloadBtn.addEventListener('click', () => {
+  if (capturedImages.length === 0) {
+      alert('No images to download!');
+      return;
+  }
+
+  capturedImages.forEach((photo, index) => {
+      const a = document.createElement('a');
+      a.href = photo[0];
+      myNumber++;
+      localStorage.setItem('myNumber', myNumber);
+      a.download = `images_${aName}_${String(myNumber)}_${photo[1]}_${index + 1}.png`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+  });
 });
