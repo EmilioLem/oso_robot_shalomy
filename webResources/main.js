@@ -42,14 +42,14 @@ toggleCameraBtn.addEventListener('click', async () => {
     //videoElement.style.display = 'none';
     mediaStream.getTracks().forEach(track => track.stop());
     isCameraOn = false;
-    toggleCameraBtn.textContent = 'Open Camera';
+    toggleCameraBtn.textContent = 'Abrir cámara';
   } else {
     try {
       const constraints = {
         video: {
           facingMode: "user", // environment
-          width: { ideal: 1920}, //min: 1080, ideal: 1080, max: 1080 
-          height: { idea: 1080}, //min: 1080, ideal: 1080, max: 1080 
+          width: { ideal: 1080},//1920}, //min: 1080, ideal: 1080, max: 1080 
+          height: { ideal: 720},//1080}, //min: 1080, ideal: 1080, max: 1080 
           aspectRatio: 1
         }
       };
@@ -57,7 +57,7 @@ toggleCameraBtn.addEventListener('click', async () => {
       videoElement.srcObject = mediaStream;
       //videoElement.style.display = 'block';
       isCameraOn = true;
-      toggleCameraBtn.textContent = 'Close Camera';
+      toggleCameraBtn.textContent = 'Cerrar cámara';
       /*setInterval(()=>{
           const xSize = canvas.width = videoElement.videoWidth;
           const ySize = canvas.height = videoElement.videoHeight;
@@ -100,9 +100,21 @@ measurementBtn.addEventListener('click', async () => {
     // 
     console.log(`Size is ${xSize} and ${ySize}`);
     //
-    const imageData = canvas.toDataURL('image/png');
+    /*const imageData = canvas.toDataURL('image/png');
     capturedImages.push([imageData, emotionS.value]);
-    photosT.innerText = String(capturedImages.length);
+    photosT.innerText = String(capturedImages.length);*/
+    setTimeout(() => {
+      console.time('toURL');
+      try {
+        const imageData = canvas.toDataURL('image/png');
+        capturedImages.push([imageData, emotionS.value]);
+        photosT.innerText = String(capturedImages.length);
+      } catch (error) {
+        console.error('Error generating the image data URL:', error);
+      }
+      console.timeEnd('toURL');
+    }, 0); // Delay by 0ms to yield to the browser
+    
     //
     /*if (capturedImages.length === 10) {
       alert('Captured 10 images, ready to download!');
@@ -110,9 +122,11 @@ measurementBtn.addEventListener('click', async () => {
      //videoElement.style.visibility="hidden";
      
   }else{
-    alert("Open the camera first");
+    alert("Primero abra la cámara");
   }
   console.timeEnd('Total time');
+  //Media de 91 en pc
+  //
 });
       
 downloadBtn.addEventListener('click', () => {

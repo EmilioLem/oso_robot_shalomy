@@ -19,9 +19,9 @@ body{
 
 #psicoPlogo {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 25vmin;
+    top: 30px;
+    right: 30px;
+    width: 28vmin;
 }
 #camera-stream, #canvas {
     /*transform: scale(0.2); /* Reduce video display size by 5 times */
@@ -30,12 +30,12 @@ body{
 }
 #camera-stream{
     position: absolute;
-    height: 10vmin; 
+    height: 15vmin; 
     width: auto;
     /*width: 60vw;
     height: auto;*/
-    top: 20px;
-    left: 20px;
+    top: 30px;
+    left: 30px;
 }
 #canvas{
     /* display: none; */
@@ -49,13 +49,17 @@ body{
     position: absolute;
     /* height: 10vmin; 
     width: auto;*/
-    bottom: 20px;
-    left: 20px;
+    bottom: 30px;
+    left: 30px;
 }
 
+p{
+    margin: 0px;
+}
 button{
     /* transition: bounce 1s; */
     transition: transform 0.5s ease;
+    margin: 13px;
 }
 button:active{
     /* animation: bounce 1s; */
@@ -67,7 +71,7 @@ button:active{
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-30px);
     }
         
 }

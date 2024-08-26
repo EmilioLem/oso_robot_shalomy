@@ -7,7 +7,8 @@ const urlsToCache = [
     './service-worker.js',
     './webResources/images/icon-72x72.png',
     './webResources/images/icon-192x192.png',
-    './webResources/images/favicon.ico'
+    './webResources/images/favicon.ico',
+    './webResources/images/psicoLogo.png'
 ];
 
 self.addEventListener('install', event => {
