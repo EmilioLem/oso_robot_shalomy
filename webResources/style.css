@@ -166,7 +166,7 @@ body{
 /* Initially hide all slides except the first one */
 .slide {
     display: none;
-    height: 96vh;
+    height: 100vh;/* 96vh;*/
     background: linear-gradient(45deg, #FF5733, #3E64FF, #33FF57);
     margin: 0;
     /* background: radial-gradient(circle, #FF5733, #3E64FF, #33FF57); NEVER!!!!! */
