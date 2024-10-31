@@ -10,7 +10,6 @@ function setAnswer(button, theQuestionIndex, theAnswerIndex){
 
 }
 
-//const questionsArray = [
 function addUpContent(){   
     const slidesContainer = document.getElementById("slidesContainer");
     

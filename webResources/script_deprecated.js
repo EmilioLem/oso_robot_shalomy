@@ -1,4 +1,3 @@
-
 var bkgAudio1 = document.getElementById("bkgAudio1");
 let mB = document.getElementById("musicButton");
 
@@ -11,28 +10,28 @@ mB.addEventListener("click", ()=>{
     }
     mB.classList.toggle("playing");
 });
- 
 
+document.getElementById("hisOrHerOrHhhname").value = "";    
+
+//addUpContent();
+//Sliding thing
+var slides = document.querySelectorAll(".slide");
 var currentSlide = 0;
-
 function showSlide(index){
-    var slides = document.querySelectorAll(".slide");
     for(let i=0; i<slides.length; i++){
         slides[i].style.display = "none";
     }
     slides[index].style.display = "block";
 }
-
 function switchSlide(isNextSlide){
-    var slides = document.querySelectorAll(".slide");
-    //document.getElementById("click01").play();
-    playSound("./webResources/audios/clickSound.mp3");
+    document.getElementById("click01").play();
     if(isNextSlide){
         if (currentSlide < slides.length - 1) {
-            currentSlide++;
+            console.log(`current slide: ${currentSlide}`);
+            currentSlide++; // Update the captured currentSlide value
+            console.log(`new slide: ${currentSlide}`);
             showSlide(currentSlide);
         } else {
-            alert("You did it!! finished");
             let request = sendAnswersToServer();
             if(request[0]){
                 alert(request[1]);
@@ -43,18 +42,12 @@ function switchSlide(isNextSlide){
         }
     }else{
         if (currentSlide > 0) {
-            currentSlide--;
+            console.log(`current slide: ${currentSlide}`);
+            currentSlide--; // Update the captured currentSlide value
+            console.log(`new slide: ${currentSlide}`);
             showSlide(currentSlide);
         }
     }
-}
-function goHome(){
-    var slides = document.querySelectorAll(".slide");
-    //document.getElementById("click01").play();
-    playSound("./webResources/audios/clickSound.mp3");
-
-    currentSlide = 0;
-    showSlide(currentSlide);
 }
 
 function startTelemetry(){
@@ -78,19 +71,8 @@ function startTelemetry(){
     });
 }
 
-function playSound(audioFileUrl) {
-  const audioCtx = new AudioContext(); // Create new AudioContext
-
-  // Load the sound asynchronously
-  fetch(audioFileUrl)
-    .then(response => response.arrayBuffer())
-    .then(arrayBuffer => audioCtx.decodeAudioData(arrayBuffer))
-    .then(audioBuffer => {
-      const source = audioCtx.createBufferSource(); // Create a source node
-      source.buffer = audioBuffer; // Assign the decoded audio buffer
-      source.connect(audioCtx.destination); // Connect to output
-      source.start(); // Start playback
+document.addEventListener('dblclick', ()=>{
+    document.documentElement.requestFullscreen().catch((e)=>{
+        alert(e);
     })
-    .catch(error => console.error("Error loading sound:", error));
-}
-  
+})

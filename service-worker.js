@@ -7,10 +7,12 @@ const urlsToCache = [
     './old_index.html',
 
     './webResources/addUpContent.js',
+    './webResources/addUpContent_deprecated.js',
     './webResources/main.js',
     './webResources/old_style.css',
     './webResources/questionsHTML.html',
     './webResources/script.js',
+    './webResources/script_deprecated.js',
     './webResources/styles.css',
     './webResources/theQuestionsArray.js',
 
@@ -18,7 +20,6 @@ const urlsToCache = [
     './webResources/images/icon-192x192.png',
     './webResources/images/favicon.ico',
     './webResources/images/psicoLogo.png',
-    './webResources/images/babyYoda.png',
     './webResources/images/babyYoda.png',
 
     './webResources/audios/clickSound.mp3',
