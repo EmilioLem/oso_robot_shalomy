@@ -1,14 +1,29 @@
 const CACHE_NAME = 'shalomy-cache-v1';
 const urlsToCache = [
     './index.html',
-    './webResources/styles.css',
-    './webResources/main.js',
+    './index2.html',
     './manifest.json',
     './service-worker.js',
+    './old_index.html',
+
+    './webResources/addUpContent.js',
+    './webResources/main.js',
+    './webResources/old_style.css',
+    './webResources/questionsHTML.html',
+    './webResources/script.js',
+    './webResources/styles.css',
+    './webResources/theQuestionsArray.js',
+
     './webResources/images/icon-72x72.png',
     './webResources/images/icon-192x192.png',
     './webResources/images/favicon.ico',
-    './webResources/images/psicoLogo.png'
+    './webResources/images/psicoLogo.png',
+    './webResources/images/babyYoda.png',
+    './webResources/images/babyYoda.png',
+
+    './webResources/audios/clickSound.mp3',
+    './webResources/audios/secondBackgroundMusic.mp3',
+
 ];
 
 self.addEventListener('install', event => {
