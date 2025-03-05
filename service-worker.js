@@ -21,6 +21,7 @@ const urlsToCache = [
     './webResources/images/favicon.ico',
     './webResources/images/psicoLogo.png',
     './webResources/images/babyYoda.png',
+    './webResources/images/infoFull.jpeg',
 
     './webResources/audios/clickSound.mp3',
     './webResources/audios/secondBackgroundMusic.mp3',
