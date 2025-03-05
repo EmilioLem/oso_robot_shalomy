@@ -18,6 +18,9 @@
 <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <div id="emotionDetectionContainer">
+    <video id="video" width="320" height="240" autoplay muted></video>
+  </div>
     <div id="moreAudios">
         <audio id="click01" src="./webResources/audios/clickSound.mp3"></audio>
         <audio src="./webResources/audios/secondBackgroundMusic.mp3" loop id="bkgAudio1"></audio>
@@ -61,6 +64,10 @@
     <script src="./webResources/theQuestionsArray.js"></script>
     <script src="./webResources/addUpContent.js"></script>
     <script src="./webResources/script.js"></script>
+
+    <script defer src="./webResources/face-api.min.js"></script>
+    <script defer src="./webResources/app.js"></script>
+
     <script>
 
         //const questionsHTML = document.getElementById("questionsSlides");

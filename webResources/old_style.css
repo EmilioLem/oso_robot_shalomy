@@ -184,3 +184,25 @@ body{
 }
 
 /* https://htmlcheatsheet.com/css/ */
+
+
+
+#emotionDetectionContainer {
+    position: fixed; /* Stay in place during scroll */
+    top: 0;
+    right: 0;
+    width: 320px; /* Or adjust as needed */
+    height: 240px; /* Or adjust as needed */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    visibility: hidden;
+}
+
+#video, canvas {
+    position: absolute;
+    top: 0;
+    /*left: 0;*/
+    right: 0;
+
+    width: 30%;
+    height: 30%;
+}
