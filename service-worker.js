@@ -1,4 +1,4 @@
-const CACHE_NAME = 'shalomy-cache-v1';
+const CACHE_NAME = 'shalomy-cache-v2';
 const urlsToCache = [
     './index.html',
     './index2.html',
