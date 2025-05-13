@@ -3,49 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="oso-robot-shalomy">
-    <title>Shalomy</title>
-    <link rel="stylesheet" href="./webResources/styles.css">
-    <link rel="icon" type="image/x-icon" href="./webResources/images/favicon.ico">
-    <link rel="manifest" href="./manifest.json">
+    <title>TestEmocional</title>
+    <link rel="stylesheet" href="./webResources/old_style.css">
+    <link rel="shortcut icon" href="./webResources/images/favicon.ico" type="images/x-icon">
+    <!-- https://favicon.io/ -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet">
+<!-- https://fonts.google.com/specimen/Walter+Turncoat?query=Sideshow This is the "title" font -->
+
+
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+<link rel="manifest" href="manifest.json">
 </head>
 <body>
+    <div id="moreAudios">
+        <audio id="click01" src="./webResources/audios/clickSound.mp3"></audio>
+        <audio src="./webResources/audios/secondBackgroundMusic.mp3" loop id="bkgAudio1"></audio>
+    </div>
     
-
-    <video id="camera-stream" autoplay muted></video>
-    <br>
-    <img src="./webResources/images/psicoLogo.png" alt="Psicopedagigía logo" id="psicoPlogo">
-    <br>
-    <canvas id="canvas"></canvas>
-    <br>
+    <!-- <div>
+        <p class="the1">He he</p>
+        <p class="the2">Jo jo</p>
+        <p class="the3">Jiji</p>
+    </div> -->
     
-    
-
-    <div id="settingsDiv">
-
-        <select id="emotionS">
-            <option value="a" selected>alegría</option>
-            <option value="e">enojo</option>
-            <option value="m">miedo</option>
-            <option value="t">tristeza</option>
-            <option value="a">amor</option>
-        </select>
+    <div class="slide" style="display: block;">
+        <button id="musicButton" class="highLight">
+            <!-- Poner la clase al botón en lugar del div, y poner padding i ajustar. -->
+            <p>Habilitar música</p>    
+        </button>
+        <a href="index2.html">Adquirir fotos</a>
+        <h2 class="curlyText">Bienvenido al test emocional!</h2>
+        <img src="./webResources/images/babyYoda.png" alt="cute baby yoda" width="200px" id="yodaImg">
+        <img id="contInfo" src="./webResources/images/infoFull.jpeg" alt="contactInfoPsicologa" width="32%">
         <br>
+        <input class="someInput" type="text" placeholder="Nombre y número de teléfono" id="hisOrHerOrHhhname">
         
-        <button id="toggle-camera-btn">Abrir Cámara</button>
-        <button id="take-measurement-btn">Tomar foto</button>
-        <p>Fotos tomadas: <span id="photosT">0</span>     <button id="resetB">Limpiar</button></p>
-        <button id="download-btn">Descargar imágenes</button>
-      
-        <a href="index2.html">Ir a formulario de emociones</a>
+        <br>
+        <!-- <input class="someInput" type="text" placeholder="IP adress of the ESP (optional)" id="theESPip">
+        <button onclick="startTelemetry()">ok</button> -->
         
-    </div>    
+        <div class="switchButtonsArea">
+            <button class="slideButton" onclick="window.location.reload();">Reload</button>
+            <!-- <button class="slideButton" onclick="switchSlide(false)">Anterior</button> -->
+            <button class="slideButton" onclick="switchSlide(true)">Siguiente</button>
+        </div>
+    </div>
+    
+    <!-- <div id="questionsSlides"></div> -->
+    
     
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/js-base64@3.7.2/base64.min.js"></script> -->
 
-    <script src="./webResources/main.js"></script>
+
+    <script src="./webResources/theQuestionsArray.js"></script>
+    <script src="./webResources/addUpContent.js"></script>
+    <script src="./webResources/script.js"></script>
+    <script>
+
+        //const questionsHTML = document.getElementById("questionsSlides");
+        //Is it possible to load a json object with fetch???
+        fetch("./webResources/questionsHTML.html")
+          .then(response => response.text())
+          .then(data => {
+            document.querySelector(".slide").insertAdjacentHTML("afterend", data);
+            //questionsHTML.innerHTML = data;
+          })
+          .catch(error => {
+            console.error("Error fetching content:", error);
+          }).then(()=>{
+              document.querySelectorAll(".cuttonB").forEach((element, index)=>{
+                element.innerHTML = `
+                  <svg class="svg-container cuttonButton${index%4}" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outermost circle (the largest ring) -->
+                    <circle cx="30" cy="30" r="30" fill="#e0e0e0" />
+                    
+                    <!-- Second circle (second largest ring) -->
+                    <circle cx="30" cy="30" r="27" fill="#c0c0c0" />
+                    
+                    <!-- Third circle (third largest ring) -->
+                    <circle cx="30" cy="30" r="22" fill="#a0a0a0" />
+                    
+                    <!-- Innermost circle (the smallest ring) -->
+                    <circle cx="30" cy="30" r="17" fill="#808080" />
+    
+                    <!-- Dots -->
+                    <circle cx="24" cy="24" r="3" fill="black" />
+                <circle cx="36" cy="24" r="3" fill="black" />
+                <circle cx="24" cy="36" r="3" fill="black" />
+                <circle cx="36" cy="36" r="3" fill="black" />
+                </svg>
+                `;
+              })              
+        });
+          
+          /////
+          document.addEventListener('dblclick', ()=>{
+              document.documentElement.requestFullscreen().catch((e)=>{
+                  alert(e);
+                })
+})
+
+</script>
 </body>
 </html>
