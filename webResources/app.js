@@ -35,7 +35,7 @@ async function loadModels() {
   async function setupCamera() {
     const video = document.getElementById('video');
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ video: {} });
+      const stream = await navigator.mediaDevices.getUserMedia({ video: { width: 320, height: 240 } });
       video.srcObject = stream;
       return new Promise((resolve) => {
         video.onloadedmetadata = () => {
