@@ -58,27 +58,51 @@ async function loadModels() {
     const displaySize = { width: video.width, height: video.height };
     faceapi.matchDimensions(canvas, displaySize);
   
-    // Set an interval to process frames continuously (every 100ms)
-    setInterval(async () => {
+    // Recursive detection function
+    async function detectFrame() {
       const detections = await faceapi
         .detectAllFaces(video, new faceapi.SsdMobilenetv1Options())
         .withFaceLandmarks()
         .withFaceExpressions();
-  
-      // Resize results to match the display size
+    
       const resizedDetections = faceapi.resizeResults(detections, displaySize);
-  
-      // Clear the canvas and draw the detections
+    
       canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
       faceapi.draw.drawDetections(canvas, resizedDetections);
       faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
       faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
-  
-      // Log the emotion probabilities for each detected face
+    
       detections.forEach((detection) => {
         console.log(detection.expressions);
       });
-    }, 100);
+    
+      // Call the function again when the current one is done
+      setTimeout(detectFrame); // no delay means it runs as soon as ready
+    }
+
+    //// Set an interval to process frames continuously (every 100ms)
+    //setInterval(async () => {
+    //  const detections = await faceapi
+    //    .detectAllFaces(video, new faceapi.SsdMobilenetv1Options())
+    //    .withFaceLandmarks()
+    //    .withFaceExpressions();
+    //  
+    //  // Resize results to match the display size
+    //  const resizedDetections = faceapi.resizeResults(detections, displaySize);
+    //  
+    //  // Clear the canvas and draw the detections
+    //  canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+    //  faceapi.draw.drawDetections(canvas, resizedDetections);
+    //  faceapi.draw.drawFaceLandmarks(canvas, resizedDetections);
+    //  faceapi.draw.drawFaceExpressions(canvas, resizedDetections);
+    //  
+    //  // Log the emotion probabilities for each detected face
+    //  detections.forEach((detection) => {
+    //    console.log(detection.expressions);
+    //  });
+    //}, 100);
+    detectFrame();
+
   }
   
   // Initialize the application: load models, set up the camera, and start detection
