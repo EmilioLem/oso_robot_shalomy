@@ -194,7 +194,7 @@ body{
     width: 320px; /* Or adjust as needed */
     height: 240px; /* Or adjust as needed */
     z-index: 1000; /* Ensure it's on top of other elements */
-    visibility: hidden;
+    visibility: unset; /*hidden;*/
 }
 
 #video, canvas {
