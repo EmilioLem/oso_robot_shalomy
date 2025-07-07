@@ -16,6 +16,26 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
 <link rel="manifest" href="manifest.json">
+
+<style>
+  
+  #btn_glitchcam {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  #canvas_glitchcam {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: calc(15vmin);
+    height: auto;
+    z-index: 9999;
+    border: 2px solid #fff;
+    image-rendering: pixelated;
+  }
+</style>
 </head>
 <body>
     <div id="moreAudios">
@@ -34,6 +54,7 @@
             <!-- Poner la clase al botón en lugar del div, y poner padding i ajustar. -->
             <p>Habilitar música</p>    
         </button>
+        <button id="btn_glitchcam">Iniciar cámara</button>
         <a href="index2.html">Adquirir fotos</a>
         <h2 class="curlyText">Bienvenido al test emocional!</h2>
         <img src="./webResources/images/babyYoda.png" alt="cute baby yoda" width="200px" id="yodaImg">
@@ -107,5 +128,84 @@
 })
 
 </script>
+
+
+    <video id="video_glitchcam" autoplay playsinline style="display:none;"></video>
+    <canvas id="canvas_glitchcam" width="320" height="240"></canvas>
+
+    <script>
+      const video_glitchcam = document.getElementById('video_glitchcam');
+      const canvas_glitchcam = document.getElementById('canvas_glitchcam');
+      const ctx_glitchcam = canvas_glitchcam.getContext('2d');
+      const btn_glitchcam = document.getElementById('btn_glitchcam');
+  
+      let stream_glitchcam = null;
+      let running_glitchcam = false;
+  
+      // 💡 Change this value to 2, 4, or 6 for different bit depths
+      const BIT_DEPTH_glitchcam = 4;
+  
+      function quantizeBits_glitchcam(r, g, b) {
+        const levels_glitchcam = Math.pow(2, BIT_DEPTH_glitchcam / 3);
+        const step_glitchcam = 255 / (levels_glitchcam - 1);
+  
+        const quantize_glitchcam = (v) => Math.round(v / step_glitchcam) * step_glitchcam;
+  
+        return [
+          quantize_glitchcam(r),
+          quantize_glitchcam(g),
+          quantize_glitchcam(b)
+        ];
+      }
+  
+      function drawFrame_glitchcam() {
+        if (!running_glitchcam) return;
+        ctx_glitchcam.drawImage(video_glitchcam, 0, 0, canvas_glitchcam.width, canvas_glitchcam.height);
+        const frame_glitchcam = ctx_glitchcam.getImageData(0, 0, canvas_glitchcam.width, canvas_glitchcam.height);
+        const data_glitchcam = frame_glitchcam.data;
+  
+        for (let i = 0; i < data_glitchcam.length; i += 4) {
+          const [r, g, b] = quantizeBits_glitchcam(data_glitchcam[i], data_glitchcam[i + 1], data_glitchcam[i + 2]);
+          data_glitchcam[i] = r;
+          data_glitchcam[i + 1] = g;
+          data_glitchcam[i + 2] = b;
+        }
+  
+        ctx_glitchcam.putImageData(frame_glitchcam, 0, 0);
+        requestAnimationFrame(drawFrame_glitchcam);
+      }
+  
+      async function startCamera_glitchcam() {
+        stream_glitchcam = await navigator.mediaDevices.getUserMedia({
+          video: {
+            width: { ideal: 320 },
+            height: { ideal: 240 },
+            facingMode: "user"
+          }
+        });
+        video_glitchcam.srcObject = stream_glitchcam;
+        running_glitchcam = true;
+        drawFrame_glitchcam();
+      }
+  
+      function stopCamera_glitchcam() {
+        if (stream_glitchcam) {
+          stream_glitchcam.getTracks().forEach(track => track.stop());
+          stream_glitchcam = null;
+        }
+        running_glitchcam = false;
+        ctx_glitchcam.clearRect(0, 0, canvas_glitchcam.width, canvas_glitchcam.height);
+      }
+  
+      btn_glitchcam.onclick = async () => {
+        if (!running_glitchcam) {
+          btn_glitchcam.textContent = "Stop Camera";
+          await startCamera_glitchcam();
+        } else {
+          btn_glitchcam.textContent = "Start Camera";
+          stopCamera_glitchcam();
+        }
+      };
+    </script>
 </body>
 </html>
